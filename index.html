@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+</head>
+<body>
+    <div id="form1">
+        <table>
+          <form>
+
+            <tr>
+                <td><p>Customer's Name</p></td>
+                <td><input type="text" placeholder="Enter Customer's Name"></td>
+            </tr>
+            <tr>
+                <td><p>Item </p></td>
+                <td><input type="text" placeholder="Product's name"></td>
+            </tr>
+            <tr>
+                <td><p>Weight (वज़न)</p></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td><p>Wastage (छीजत)</p></td>
+                <td><input type="number" placeholder=""></td>
+            </tr>
+            <tr>
+                <td><p>ताछ</p></td>
+                <td><input type="number" placeholder=""></td>
+            </tr>
+            <tr>
+                <td><p>Final weight(वापस) </p></td>
+                <td><input type="number" placeholder=""></td>
+            </tr>
+            
+        </table>
+    </div>
+
+
+    <div class="form2">
+        <table>
+            <tr>
+                <td><p>Item Description</p></td>
+                <td><input type="text" placeholder="Item Description" id="desc"></td>
+            </tr>
+            <tr>
+                <td><p>Quantity</p></td>
+                <td><input type="number" placeholder="Quantity" id="qnt"></td>
+            </tr>
+            <tr>
+                <td><p>Price</p></td>
+                <td><input type="number" placeholder="Price" id="price"></td>
+            </tr>
+          </form>
+        </table>
+        <button onclick="fun()">Add Item</button>
+    </div>
+
+    <div id="table1">
+        <table id="table" style="width:75%">
+            <tr>
+                <th>Item_Des</th>
+                <th>Qnt.</th>
+                <th>Price</th>
+                <th>Amount</th>
+            </tr>
+        </table>
+    </div>
+    <button onclick="CN()"><a href="html/invoice.html">Click me!</a></button>
+
+    <script src="JS/index.js"></script>
+</body>
+</html>

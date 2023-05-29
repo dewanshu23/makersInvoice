@@ -1,0 +1,20 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#table1{
+  height: auto;
+  border: solid rgb(10, 10, 10) 2px;
+  width: auto;
+}
+
+table, th, td{
+  
+  border-collapse: collapse;
+}
+
+div{
+  height: auto;
+width: 400px;
+}
