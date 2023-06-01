@@ -1,4 +1,4 @@
-
+var itemDes=[],qnt=[],price=[],amount=[];
 function fun()
 {
     let table=document.querySelector('#table');
@@ -18,7 +18,14 @@ function fun()
     c3.innerText = c3in.value;
     if(c4in!=0){c4.innerText = c4in;}
     
+    //adding item in Array
+    itemDes.push(c1in.value);
 
+    qnt.push(c2in.value);
+
+    price.push(c3in.value);
+    
+    amount.push(c4in);
     //empty colls
     c1in.value='';
     c2in.value='';
@@ -26,15 +33,11 @@ function fun()
     c4in.value='';
 }
 var inp=document.querySelectorAll('input')
+var cn;
+var data=document.querySelectorAll('.data');
 function CN()
 {
-    var cn;
-    var item;
-    var weight;
-    var waste;
-    var margin;
-    var FW;
-    var nag_weight;
+    var item,weight,waste,margin,FW;
     cn=inp[0].value;
     localStorage.setItem("cust_name", cn);
 
@@ -52,6 +55,11 @@ function CN()
 
     FW=inp[5].value;
     localStorage.setItem("FW",FW);
+
+    localStorage.setItem("itemDes",itemDes);
+    localStorage.setItem("qnt",qnt);
+    localStorage.setItem("price",price);
+    localStorage.setItem("amount",amount);
+    localStorage.setItem("tableLen",price.length);
+    
 }
-
-

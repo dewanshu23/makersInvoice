@@ -7,6 +7,7 @@ input::-webkit-inner-spin-button {
   height: auto;
   border: solid rgb(10, 10, 10) 2px;
   width: auto;
+  text-align: center;
 }
 
 table, th, td{

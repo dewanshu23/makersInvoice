@@ -1,0 +1,16 @@
+.Hname{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgba(116, 1, 1, 0.662);
+    text-align: center;
+}
+.container{
+    border : 1px solid black; 
+    text-align: justify;
+    padding: 15px;
+    height: 500px;
+    width: 300px;
+}
+#table{
+   
+    text-align: center;
+}

@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../CSS/invoice.css">
 </head>
 <body>
-    <h1>Ganpati Jewellers</h1>
+<div class="container">
+    <h1 class="Hname">Ganpati Jewellers</h1>
     <h3>Customer Name : <span id="CN" class="data"></span></h3>
     <h3 id="Product">Item :<span id="item" class="data"></span> </h3>
     <div>
@@ -17,7 +19,18 @@
         <p>ताछ - <span class="data"></span></p>
         <p>Final weight(वापस) - <span id="FW" class="data"></span></p>
     </div>
-    <div></div>
+    <div>
+        <table id="table" style="width:75%" border="1px">
+            <tr>
+                <th>Item_Des</th>
+                <th>Qnt.</th>
+                <th>Price</th>
+                <th>Amount</th>
+            </tr>
+        </table>
+    </div>
+</div>
+    <button onclick="window.print()">Print</button>
     <script src="../JS/invoice.js"></script>
 </body>
 </html>
