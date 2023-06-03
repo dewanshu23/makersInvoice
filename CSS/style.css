@@ -1,21 +1,44 @@
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-#table1{
-  height: auto;
-  border: solid rgb(10, 10, 10) 2px;
-  width: auto;
+table{
+  width: 100%;
+  font-size: large;
   text-align: center;
-}
-
-table, th, td{
-  
+  border: 1px solid grey;
   border-collapse: collapse;
+  font-family: 'Dancing Script', cursive;
 }
-
-div{
-  height: auto;
-width: 400px;
+th,td{
+  border: 1px solid grey;
+}
+input{
+  float: left;
+  margin-left: 15px;
+  height: 30px;
+  width: 300px;
+  border: none;
+  font-size: 20px;
+}
+input:focus{
+  outline: none;
+}
+.main{
+  margin: auto;
+}
+#form1{
+  justify-content: center;
+  text-align: center;
+  
+}
+.p{
+  background-color: rgb(242, 242, 242);
+}
+.addBtn{
+  float: right;
+  height: 45px;
+  width: 150px;
+  background-color: rgb(19, 101, 254);
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: medium;
 }

@@ -5,63 +5,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <title>Invoice Generator</title>
 </head>
 <body>
-    <div id="form1">
+<div class="main">
+    <div id="form1" class="form">
+        <img src="img/logo.png" style="width: auto;">
         <table>
           <form>
-
             <tr>
-                <td><p>Customer's Name</p></td>
-                <td><input type="text" placeholder="Enter Customer's Name"></td>
+                <td class="p"><p>Customer's Name</p></td>
+                <td><input   type="text" placeholder="Ram Lal Singh " size="50"></td>
             </tr>
             <tr>
-                <td><p>Item </p></td>
-                <td><input type="text" placeholder="Product's name"></td>
+                <td class="p"><p>Item </p></td>
+                <td><input   type="text" placeholder="Product's name"></td>
             </tr>
             <tr>
-                <td><p>Weight (वज़न)</p></td>
-                <td><input type="number"></td>
+                <td class="p"><p>Weight (वज़न)</p></td>
+                <td><input   type="number"></td>
             </tr>
             <tr>
-                <td><p>Wastage (छीजत)</p></td>
-                <td><input type="number" placeholder=""></td>
+                <td class="p"><p>Wastage (छीजत)</p></td>
+                <td><input   type="number" placeholder=""></td>
             </tr>
             <tr>
-                <td><p>ताछ</p></td>
-                <td><input type="number" placeholder=""></td>
+                <td class="p"><p>ताछ</p></td>
+                <td><input   type="number" placeholder=""></td>
             </tr>
             <tr>
-                <td><p>Final weight(वापस) </p></td>
-                <td><input type="number" placeholder=""></td>
+                <td class="p"><p>Final weight(वापस) </p></td>
+                <td><input   type="number" placeholder=""></td>
+            </tr>
+            <tr>
+                <td class="p"><p>Item Description</p></td>
+                <td><input   type="text" placeholder="Item Description" id="desc"></td>
+            </tr>
+            <tr>
+                <td class="p"><p>Quantity</p></td>
+                <td><input   type="number" placeholder="Quantity" id="qnt"></td>
+            </tr>
+            <tr>
+                <td class="p"><p>Price</p></td>
+                <td><input   type="number" placeholder="Price" id="price"></td>
             </tr>
             
-        </table>
+        </table><br>
+        <button onclick="fun()" class="addBtn">Add Item</button>
+        <br>
     </div>
 
 
-    <div class="form2">
+    <!-- <div id="form2" class="form">
         <table>
-            <tr>
-                <td><p>Item Description</p></td>
-                <td><input type="text" placeholder="Item Description" id="desc"></td>
-            </tr>
-            <tr>
-                <td><p>Quantity</p></td>
-                <td><input type="number" placeholder="Quantity" id="qnt"></td>
-            </tr>
-            <tr>
-                <td><p>Price</p></td>
-                <td><input type="number" placeholder="Price" id="price"></td>
-            </tr>
+            
           </form>
         </table>
-        <button onclick="fun()">Add Item</button>
-    </div>
+    </div> -->
+    <br>
 
-    <div id="table1">
-        <table id="table" style="width:75%">
+    <div id="table1" class="form">
+        <table id="table">
             <tr>
                 <th>Item_Des</th>
                 <th>Qnt.</th>
@@ -69,9 +76,9 @@
                 <th>Amount</th>
             </tr>
         </table>
+        <button onclick="CN()" class="submitBtn"><a href="HTML/index.html">Generate Invoice</a></button>
     </div>
-    <button onclick="CN()"><a href="HTML/index.html">Click me!</a></button>
-
+</div>
     <script src="JS/index.js"></script>
 </body>
 </html>
