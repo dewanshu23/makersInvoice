@@ -1,23 +1,24 @@
 var itemDes=[],qnt=[],price=[],amount=[];
-function fun()
-{
-    let table=document.querySelector('#table');
-    let row = table.insertRow(-1);
-    let c1 = row.insertCell(0);
-    let c2 = row.insertCell(1);
-    let c3 = row.insertCell(2);
-    let c4 = row.insertCell(3);
+let table=document.querySelector('#table').getElementsByTagName('tbody')[0];
 
-    let c1in = document.querySelector('#desc');
-    let c2in = document.querySelector('#qnt');
-    let c3in = document.querySelector('#price');
-    let c4in = c2in.value*c3in.value;
+document.querySelector('.addBtn').addEventListener('click',function(e){
+    // let table=document.querySelector('#table');
+    var row = table.insertRow(-1);
+    var c1 = row.insertCell(0);
+    var c2 = row.insertCell(1);
+    var c3 = row.insertCell(2);
+    var c4 = row.insertCell(3);
+
+    var c1in = document.querySelector('#desc');
+    var c2in = document.querySelector('#qnt');
+    var c3in = document.querySelector('#price');
+    var c4in = c2in.value*c3in.value;
     //data entry to the table
     c1.innerText = c1in.value;
     c2.innerText = c2in.value;
     c3.innerText = c3in.value;
-    if(c4in!=0){c4.innerText = c4in;}
-    
+    if(c4in!==0){c4.innerHTML = c4in}
+
     //adding item in Array
     itemDes.push(c1in.value);
 
@@ -27,11 +28,15 @@ function fun()
     
     amount.push(c4in);
     //empty colls
-    c1in.value='';
-    c2in.value='';
-    c3in.value='';
-    c4in.value='';
-}
+    e.preventDefault();
+    c1in.value = "";
+    c2in.value = "";
+    c3in.value = "";
+});
+
+
+
+
 var inp=document.querySelectorAll('input')
 var cn;
 var data=document.querySelectorAll('.data');

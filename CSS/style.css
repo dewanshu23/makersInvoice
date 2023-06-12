@@ -4,7 +4,7 @@ table{
   text-align: center;
   border: 1px solid grey;
   border-collapse: collapse;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Roboto Slab', serif;
 }
 th,td{
   border: 1px solid grey;
@@ -31,7 +31,10 @@ input:focus{
 .p{
   background-color: rgb(242, 242, 242);
 }
-.addBtn{
+th{
+  background-color: rgb(242, 242, 242);
+}
+.submitBtn,.addBtn{
   float: right;
   height: 45px;
   width: 150px;

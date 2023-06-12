@@ -12,7 +12,7 @@ var data=document.querySelectorAll('.data')
         var price = localStorage.getItem("price").split(",")
         var amount = localStorage.getItem("amount").split(",")
         var tableLen=localStorage.getItem("tableLen")
-
+       
         
         cust_name.innerHTML = localStorage.getItem("cust_name");
         item_name.innerHTML = localStorage.getItem("item_name");
@@ -33,31 +33,24 @@ var data=document.querySelectorAll('.data')
         document.querySelector('#NW').innerHTML=nag_weight;
 
 
-
+var total=0;
+let table=document.querySelector('#table');
         for(let i=0;i<tableLen;i++)
         {
-                let table=document.querySelector('#table');
+                let amt=parseFloat(amount[i])
                 let row = table.insertRow(-1);
                 let c1 = row.insertCell(0);
                 let c2 = row.insertCell(1);
                 let c3 = row.insertCell(2);
                 let c4 = row.insertCell(3);
-
+                total=amt+total;
+        
                 //insert data
                 c1.innerText = itemDes[i];
                 c2.innerText = qnt[i];
                 c3.innerText = price[i];
-                c4.innerText = amount[i];
+                c4.innerText = amt;
+                
+        
         }
-
-        function printDiv() 
-        {
-                var divContents = document.getElementById("GFG").innerHTML;
-                var a = window.open('', '', 'height=500, width=500');
-                a.document.write('<html>');
-                a.document.write('<body > <h1>Div contents are <br>');
-                a.document.write(divContents);
-                a.document.write('</body></html>');
-                a.document.close();
-                a.print();
-        }
+        table.innerHTML+="<tr><td colspan='3'><b>Total</b></td><td>"+total+"</td></tr>"
