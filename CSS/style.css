@@ -21,7 +21,7 @@ input:focus{
   outline: none;
 }
 .main{
-  margin: auto;
+  /* margin: auto; */
 }
 #form1{
   justify-content: center;
@@ -29,7 +29,7 @@ input:focus{
   
 }
 .p{
-  background-color: rgb(202, 34, 34);
+  background-color: rgb(236, 236, 236);
 }
 th{
   background-color: rgb(242, 242, 242);
@@ -44,4 +44,7 @@ th{
   color: white;
   font-family: 'Inter', sans-serif;
   font-size: medium;
+}
+.img{
+  width: 100%;
 }
