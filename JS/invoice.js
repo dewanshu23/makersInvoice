@@ -12,7 +12,10 @@ var data=document.querySelectorAll('.data')
         var price = localStorage.getItem("price").split(",")
         var amount = localStorage.getItem("amount").split(",")
         var tableLen=localStorage.getItem("tableLen")
-       
+        var jama = localStorage.getItem("jama");
+        var baki = localStorage.getItem("baki");
+       baki = parseFloat(baki)
+       jama = parseFloat(jama)
         
         cust_name.innerHTML = localStorage.getItem("cust_name");
         item_name.innerHTML = localStorage.getItem("item_name");
@@ -44,7 +47,7 @@ let table=document.querySelector('#table');
                 let c3 = row.insertCell(2);
                 let c4 = row.insertCell(3);
                 total=amt+total;
-        
+
                 //insert data
                 c1.innerText = itemDes[i];
                 c2.innerText = qnt[i];
@@ -54,3 +57,20 @@ let table=document.querySelector('#table');
         
         }
         table.innerHTML+="<tr><td colspan='3'><b>Total</b></td><td>"+total+"</td></tr>"
+        // if(isNaN(baki)==false)
+        // {
+        //         total=total+baki;
+                
+        // }
+        // else
+        // {
+        //         total=total-jama;
+        // }
+        total+=baki;
+        total-=jama;
+
+        total= Math.abs(total);
+
+        table.innerHTML+="<tr><td colspan='3'><b>baki</b></td><td>"+baki+"</td></tr>"
+        table.innerHTML+="<tr><td colspan='3'><b>jama</b></td><td>"+jama+"</td></tr>"
+        table.innerHTML+="<tr><td colspan='3'><b>Grand Total</b></td><td>"+total+"</td></tr>"

@@ -60,6 +60,12 @@ function CN()
 
     FW=inp[5].value;
     localStorage.setItem("FW",FW);
+    
+    jama=inp[9].value
+    localStorage.setItem("jama",jama);
+    
+    var baki = inp[10].value
+    localStorage.setItem("baki",baki);
 
     localStorage.setItem("itemDes",itemDes);
     localStorage.setItem("qnt",qnt);
