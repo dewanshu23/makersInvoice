@@ -12,17 +12,15 @@ th,td{
 input{
   float: left;
   margin-left: 15px;
-  height: 30px;
-  width: 300px;
+  height: 20px;
+  width: 245px;
   border: none;
   font-size: 20px;
 }
 input:focus{
   outline: none;
 }
-.main{
-  /* margin: auto; */
-}
+
 #form1{
   justify-content: center;
   text-align: center;

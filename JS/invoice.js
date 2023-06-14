@@ -56,7 +56,7 @@ let table=document.querySelector('#table');
                 
         
         }
-        table.innerHTML+="<tr><td colspan='3'><b>Total</b></td><td>"+total+"</td></tr>"
+        table.innerHTML+="<tr><td colspan='3'><b>Total</b></td><td><v>"+total+"</b></td></tr>"
         // if(isNaN(baki)==false)
         // {
         //         total=total+baki;
@@ -70,7 +70,11 @@ let table=document.querySelector('#table');
         total-=jama;
 
         total= Math.abs(total);
+        if(baki!=0)
+                table.innerHTML+="<tr><td colspan='3'><b>baki</b></td><td><b>"+baki+"</b></td></tr>"
 
-        table.innerHTML+="<tr><td colspan='3'><b>baki</b></td><td>"+baki+"</td></tr>"
-        table.innerHTML+="<tr><td colspan='3'><b>jama</b></td><td>"+jama+"</td></tr>"
-        table.innerHTML+="<tr><td colspan='3'><b>Grand Total</b></td><td>"+total+"</td></tr>"
+        else if(jama!=0)
+                table.innerHTML+="<tr><td colspan='3'><b>jama</b></td><td><b>"+jama+"</b></td></tr>"
+        
+        
+        table.innerHTML+="<tr><td colspan='3'><b>Grand Total</b></td><td><b>"+total+"</b></td></tr>"
