@@ -30,10 +30,14 @@ document.querySelector('.addBtn').addEventListener('click',function(e){
         
         amount.push(c4in);
         //empty colls
-        e.preventDefault();
         c1in.value = "";
         c2in.value = "";
-        c3in.value = "";}
+        c3in.value = "";
+    }
+    else{
+        alert('enter Items!')
+    }
+    e.preventDefault();
 });
 
 
