@@ -78,3 +78,14 @@ let table=document.querySelector('#table');
         
         
         table.innerHTML+="<tr><td colspan='3'><b>Grand Total</b></td><td><b>"+total+"</b></td></tr>"
+
+
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+        
+        today = dd + '/' + mm + '/' + yyyy;
+        document.querySelector('.date span').innerText=today
+
+        
