@@ -32,10 +32,12 @@
 @media print{
     body *:not(.main):not(.main *){ 
         visibility: hidden;
+        -webkit-print-color-adjust: exact !important;
     }
     #header{
         background-color: rgb(192, 59, 59);
     }
+    
 }
 .inside{
     padding: 15px;
@@ -85,3 +87,6 @@ img{
     display: inline-block;
 }
 
+*{
+    -webkit-print-color-adjust: exact !important;
+}
