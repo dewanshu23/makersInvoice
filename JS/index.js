@@ -2,36 +2,38 @@ var itemDes=[],qnt=[],price=[],amount=[];
 let table=document.querySelector('#table').getElementsByTagName('tbody')[0];
 
 document.querySelector('.addBtn').addEventListener('click',function(e){
-    // let table=document.querySelector('#table');
-    var row = table.insertRow(-1);
-    var c1 = row.insertCell(0);
-    var c2 = row.insertCell(1);
-    var c3 = row.insertCell(2);
-    var c4 = row.insertCell(3);
-
     var c1in = document.querySelector('#desc');
     var c2in = document.querySelector('#qnt');
     var c3in = document.querySelector('#price');
-    var c4in = c2in.value*c3in.value;
-    //data entry to the table
-    c1.innerText = c1in.value;
-    c2.innerText = c2in.value;
-    c3.innerText = c3in.value;
-    if(c4in!==0){c4.innerHTML = c4in}
+    // let table=document.querySelector('#table');
+    if(c1in.value != '' || c2in.value != '' || c3in.value != '')
+    {
+        var row = table.insertRow(-1);
+        var c1 = row.insertCell(0);
+        var c2 = row.insertCell(1);
+        var c3 = row.insertCell(2);
+        var c4 = row.insertCell(3);
 
-    //adding item in Array
-    itemDes.push(c1in.value);
+        var c4in = c2in.value*c3in.value;
+        //data entry to the table
+        c1.innerText = c1in.value;
+        c2.innerText = c2in.value;
+        c3.innerText = c3in.value;
+        if(c4in!==0){c4.innerHTML = c4in}
 
-    qnt.push(c2in.value);
+        //adding item in Array
+        itemDes.push(c1in.value);
 
-    price.push(c3in.value);
-    
-    amount.push(c4in);
-    //empty colls
-    e.preventDefault();
-    c1in.value = "";
-    c2in.value = "";
-    c3in.value = "";
+        qnt.push(c2in.value);
+
+        price.push(c3in.value);
+        
+        amount.push(c4in);
+        //empty colls
+        e.preventDefault();
+        c1in.value = "";
+        c2in.value = "";
+        c3in.value = "";}
 });
 
 

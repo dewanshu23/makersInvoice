@@ -1,11 +1,12 @@
 var data=document.querySelectorAll('.data')
 
         let cust_name = data[0]
-        let item_name = data[1]
-        let weight = data[2]
-        let waste = data[3]
-        let margin = data[4]
-        let FW = data[5]
+        let item_name = data[2]
+        console.log(item_name)
+        let weight = data[3]
+        let waste = data[4]
+        let margin = data[5]
+        let FW = data[6]
         let nag_weight
         var itemDes = localStorage.getItem("itemDes").split(",")
         var qnt = localStorage.getItem("qnt").split(",")
@@ -19,6 +20,7 @@ var data=document.querySelectorAll('.data')
         
         cust_name.innerHTML = localStorage.getItem("cust_name");
         item_name.innerHTML = localStorage.getItem("item_name");
+        
         weight.innerHTML = localStorage.getItem("weight");
         waste.innerHTML = localStorage.getItem("Waste");
         margin.innerHTML = localStorage.getItem("margin");
@@ -79,7 +81,7 @@ let table=document.querySelector('#table');
         
         table.innerHTML+="<tr><td colspan='3'><b>Grand Total</b></td><td><b>"+total+"</b></td></tr>"
 
-
+        //adding current date 
         var today = new Date();
         var dd = String(today.getDate()).padStart(2, '0');
         var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
