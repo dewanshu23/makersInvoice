@@ -11,6 +11,7 @@
     font-size: 15px;
     color: white;
     margin-top: 10px;
+    margin-bottom: 0px;
 }
 .container{
     
@@ -22,6 +23,7 @@
     margin:auto;
     font-family: 'Roboto Slab', serif;
     border-top: none;
+    border-bottom: none;
 }
 #table{
    
@@ -49,9 +51,11 @@ table{
     border: 1px solid grey;
     border-collapse: collapse;
     font-family: 'Roboto Slab', serif;
+
   }
   #hindi{
     font-family: 'Martel', serif;
+    font-style: bold;
   }
  
 
@@ -60,7 +64,7 @@ h5{
   }
   .header{
     width: 156.5mm;
-    height: 35mm;
+    height: 45mm;
     border: 1px solid grey;
     margin:auto;
     border-bottom: none;
@@ -89,4 +93,30 @@ img{
 
 *{
     -webkit-print-color-adjust: exact !important;
+}
+
+#table1{
+    display: none;
+}
+.Customer{
+
+}
+
+.footer{
+    height: 5px;
+    width: 157mm;
+    background-color: rgb(204, 50, 50);
+    margin:auto;
+}
+
+#btn{
+    margin: auto;
+    height: 45px;
+    width: 150px;
+    background-color: rgb(19, 101, 254);
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: large;
 }

@@ -40,6 +40,8 @@ var data=document.querySelectorAll('.data')
 
 var total=0;
 let table=document.querySelector('#table');
+let table1=document.querySelector('#table1');
+ 
         for(let i=0;i<tableLen;i++)
         {
                 let amt=parseFloat(amount[i])
@@ -58,29 +60,23 @@ let table=document.querySelector('#table');
                 
         
         }
-        table.innerHTML+="<tr><td colspan='3'><b>Total</b></td><td><v>"+total+"</b></td></tr>"
-        // if(isNaN(baki)==false)
-        // {
-        //         total=total+baki;
+
+        if(tableLen!=0)
+        {
+                table1.style.display="block";
+                table.innerHTML+="<tr><td colspan='3'><b>Total</b></td><td><v>"+total+"</b></td></tr>"
+                total+=baki;
+                total-=jama;
+
+                total= Math.abs(total);
+                if(baki!=0)
+                        table.innerHTML+="<tr><td colspan='3'><b>baki</b></td><td><b>"+baki+"</b></td></tr>"
+
+                else if(jama!=0)
+                        table.innerHTML+="<tr><td colspan='3'><b>jama</b></td><td><b>"+jama+"</b></td></tr>"
                 
-        // }
-        // else
-        // {
-        //         total=total-jama;
-        // }
-        total+=baki;
-        total-=jama;
-
-        total= Math.abs(total);
-        if(baki!=0)
-                table.innerHTML+="<tr><td colspan='3'><b>baki</b></td><td><b>"+baki+"</b></td></tr>"
-
-        else if(jama!=0)
-                table.innerHTML+="<tr><td colspan='3'><b>jama</b></td><td><b>"+jama+"</b></td></tr>"
-        
-        
-        table.innerHTML+="<tr><td colspan='3'><b>Grand Total</b></td><td><b>"+total+"</b></td></tr>"
-
+                table.innerHTML+="<tr><td colspan='3'><b>Grand Total</b></td><td><b>"+total+"</b></td></tr>"
+        }
         //adding current date 
         var today = new Date();
         var dd = String(today.getDate()).padStart(2, '0');
