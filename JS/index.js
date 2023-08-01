@@ -43,7 +43,7 @@ document.querySelector('.addBtn').addEventListener('click',function(e){
 
 
 
-var inp=document.querySelectorAll('input')
+var inp=document.querySelectorAll('input');
 var cn;
 var data=document.querySelectorAll('.data');
 function CN()
@@ -67,10 +67,10 @@ function CN()
     FW=inp[5].value;
     localStorage.setItem("FW",FW);
     
-    jama=inp[9].value
+    jama=inp[9].value;
     localStorage.setItem("jama",jama);
     
-    var baki = inp[10].value
+    var baki = inp[10].value;
     localStorage.setItem("baki",baki);
 
     localStorage.setItem("itemDes",itemDes);
