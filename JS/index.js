@@ -1,4 +1,6 @@
-var itemDes=[],qnt=[],price=[],amount=[];
+// var itemDes=[],qnt=[],price=[],amount=[];
+let product = [];
+var miniItems = new Object();
 let table=document.querySelector('#table').getElementsByTagName('tbody')[0];
 
 document.querySelector('.addBtn').addEventListener('click',function(e){
@@ -8,31 +10,49 @@ document.querySelector('.addBtn').addEventListener('click',function(e){
     // let table=document.querySelector('#table');
     if(c1in.value != '' || c2in.value != '' || c3in.value != '')
     {
+        //creating rows and columns
         var row = table.insertRow(-1);
         var c1 = row.insertCell(0);
         var c2 = row.insertCell(1);
         var c3 = row.insertCell(2);
         var c4 = row.insertCell(3);
 
-        var c4in = c2in.value*c3in.value;
+        
         //data entry to the table
+        miniItems.dec = c1in.value;
+        miniItems.qnt = c2in.value;
+        miniItems.price = c3in.value;
+        miniItems.amount = c4in.value;
+
+
+        //adding values in items table
         c1.innerText = c1in.value;
         c2.innerText = c2in.value;
         c3.innerText = c3in.value;
-        if(c4in!==0){c4.innerHTML = c4in}
+        if(c3in!=0 && c2in!=0)
+        {
+            var c4in = c2in.value*c3in.value;
+            c4.innerHTML = c4in;
+        }
 
         //adding item in Array
-        itemDes.push(c1in.value);
+        product.push(miniItems);
+        // itemDes.push(c1in.value);
 
-        qnt.push(c2in.value);
+        // qnt.push(c2in.value);
 
-        price.push(c3in.value);
+        // price.push(c3in.value);
         
-        amount.push(c4in);
+        // amount.push(c4in);
         //empty colls
+
+        //adding element object
+
+        //emptying the values of the input box 
         c1in.value = "";
         c2in.value = "";
         c3in.value = "";
+        e.preventDefault();
     }
     else{
         alert('enter Items!')
@@ -40,7 +60,7 @@ document.querySelector('.addBtn').addEventListener('click',function(e){
     e.preventDefault();
 });
 
-
+// console.log(product)
 
 
 var inp=document.querySelectorAll('input')
@@ -73,10 +93,12 @@ function CN()
     var baki = inp[10].value
     localStorage.setItem("baki",baki);
 
-    localStorage.setItem("itemDes",itemDes);
-    localStorage.setItem("qnt",qnt);
-    localStorage.setItem("price",price);
-    localStorage.setItem("amount",amount);
+    // localStorage.setItem("itemDes",itemDes);
+    // localStorage.setItem("qnt",qnt);
+    // localStorage.setItem("price",price);
+    // localStorage.setItem("amount",amount);
+
+    localStorage.setItem("tableLen",price.length);
     localStorage.setItem("tableLen",price.length);
     
 }

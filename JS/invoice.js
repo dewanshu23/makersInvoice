@@ -19,6 +19,7 @@ var data=document.querySelectorAll('.data')
        jama = parseFloat(jama)
         
         cust_name.innerHTML = localStorage.getItem("cust_name");
+        document.querySelector('title').innerHTML=localStorage.getItem("cust_name");
         item_name.innerHTML = localStorage.getItem("item_name");
         
         weight.innerHTML = localStorage.getItem("weight");
