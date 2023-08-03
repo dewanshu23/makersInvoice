@@ -19,7 +19,7 @@
     text-align: justify;
     padding: 15px;
     height: auto;
-    width: 148.5mm;
+    width: 124.5mm;
     margin:auto;
     font-family: 'Roboto Slab', serif;
     border-top: none;
@@ -63,7 +63,7 @@ h5{
     text-align: right;
   }
   .header{
-    width: 156.5mm;
+    width: 132.5mm;
     height: 45mm;
     border: 1px solid grey;
     margin:auto;
@@ -104,7 +104,7 @@ img{
 
 .footer{
     height: 5px;
-    width: 157mm;
+    width: 133mm;
     background-color: rgb(204, 50, 50);
     margin:auto;
 }
